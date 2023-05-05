@@ -26,6 +26,32 @@ body{width: 100%; margin: auto;}
   background-color: rgba(139, 20, 243, 0.906);
   transition: 0.3s;
 }
+a.youtube {
+  background-color: #FF0000; /* Red */
+}
+a.twitter {
+  background-color: #1DA1F2; /* Blue */
+}
+a.goods {
+  background-color: #FC4D50 /* Booth */
+}
+a.questionbox {
+  background-color: #E6B45C; /* box color */
+}
+
+/* Style link text and icon */
+a {
+  display: block;
+  padding: 10px;
+  color: #FFFFFF; /* White */
+  text-decoration: none;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+a i {
+  margin-right: 10px;
+}
+
 .nav>a:hover, .footer>a:hover{
   background-color: rgb(121, 232, 121);
 }
