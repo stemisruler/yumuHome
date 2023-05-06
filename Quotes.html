@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Darumadrop+One&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <title>Yumu's Quotes</title>
     <link rel="icon" href="images/page-icon.png" type="image/png">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="header-footer.css">
+    <link rel="stylesheet" href="quotes.css">
 </head>
 <body>
     <header class="header">
@@ -23,15 +25,12 @@
       </div>
     <main>
         <section>
-            <p>이곳엔 yumu의 표정이 잘 들어난 이미지를 중앙에 배치하고 이미지를 누르면 오른쪽 대사가 바뀌는 걸 넣으면 어떨까 생각한다.
-                기다리면서 나오는 것보다 클릭하면서 나오게 하는 게 더 좋을 것 같다.
-                랜덤 이미지와 랜덤 대사를 출력하는 그 코드를 갖고 온다.
-                yumu는 끈기와 노력, 포기하지 않는 자세에 대한 명언을 얘기한다.
-                그리고 중간 중간 상대방을 위로하는 이야기를 한다. 혹은 귀여운 소리를 낸다. (귀여운 표정이나 몸짓 이미지) 그르릉 purr
-                슈파파바, 파바바바
-                이미지는 왼쪽 고정? 캐릭터처럼 쓸만한 크기의 이미지를 잘 찾아봐야겠다. 파일로 바꾸면 수정 안되는 거 해결해야함
-            </p>
-        </section>
+          <div>
+            <img id="image" src="images/quotes-images/f_away.jpg" onclick="changeImage()"> <!-- 이미지 태그, id 속성 값으로 참조할 수 있음 -->
+            <p id="text">어서와, 좋은 얘기 들으러 왔어? 
+            </p> <!-- 텍스트 태그, id 속성 값으로 참조할 수 있음 -->
+        </div>
+            </section>
     </main>
     <div class="footer_wrap">
       <footer class="footer">
@@ -53,5 +52,46 @@
         </a>
       </footer>
     </div>
+
+    <script>
+      const QUOTES = [  // const를 사용해 상수로 선언된 배열
+          {
+              imagePath: "images/quotes-images/f_away.jpg",  // 객체 속성, 이미지 경로 - 정색을 하며 할 이야기에 이 이미지를 쓴다
+              texts: ["안녕", "반가워", "잘 지냈어?", "오랜만이야"] // 객체 속성, 랜덤으로 출력될 텍스트 배열
+          },
+          {
+              imagePath: "images/quotes-images/f_a_smile.jpg", // 두 눈이 파란색으로, 눌림 매매에 대한 기본적인 이야기를 할 때 이 이미지를 쓴다, 혹은 차분한 상태의 이야기. 질투.
+              texts: ["오하요", "어서 와", "좋은 하루 시작하자"]
+          },
+          {
+              imagePath: "images/quotes-images/f_close.jpg", // 부끄러워하는 듯한 이야기를 할 때, 주로 믿는다나 사랑한다, 아니면 실수에 대한 이야기
+              texts: ["랄랄라", "웃겨", "부끄러워", "귀여워"]
+          },
+          {
+              imagePath: "images/quotes-images/f_c_smile.jpg", //폭락은 기회다, 위기는 기회다를 좀 더 극단적으로 말할 때 사용, 차분함을 넘어 차가움이 심각해졌을 때.
+              texts: ["랄랄라", "웃겨", "부끄러워", "귀여워"]
+          },
+          {
+              imagePath: "images/quotes-images/f_c_smile2.jpg", //불타기에 대한 이야기, 돌파 매매, 강세 매매 신고가 매매에 대한 이야기를 할 때. 기대감으로 흥분할 때.
+              texts: ["랄랄라", "웃겨", "부끄러워", "귀여워"]
+          },
+          {
+              imagePath: "images/quotes-images/f_failure.jpg", //불타기에 대한 이야기를 무섭게 얘기할 때. 고점 매수의 위험성을 알림. 리스크 관리의 중요성.
+              texts: ["랄랄라", "웃겨", "부끄러워", "귀여워"]
+          },
+          {
+              imagePath: "images/quotes-images/f_surprise.jpg", //슬픈 이야기, 반성, 떠날까봐 두려움, 혼자 두지 말라는 얘기 등
+              texts: ["랄랄라", "웃겨", "부끄러워", "귀여워"]
+          }
+      ];
+
+      function changeImage() { // 이미지와 텍스트를 랜덤으로 변경하는 함수
+          const randomNumber = Math.floor(Math.random() * QUOTES.length); // 랜덤 인덱스 생성 - 이미지를 랜덤으로 바꾸기 위함
+          const randomTextNumber = Math.floor(Math.random() * QUOTES[randomNumber].texts.length);  // 랜덤 인덱스 생성 - 한 이미지 안에 있는 텍스트를 랜덤으로 뽑기 위함
+          document.getElementById("image").src = QUOTES[randomNumber].imagePath; //이미지 변경
+          document.getElementById("text").innerHTML = QUOTES[randomNumber].texts[randomTextNumber]; //텍스트 변경
+      }
+  </script>
+
   </body>
 </html>
