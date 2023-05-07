@@ -6,7 +6,7 @@ body{width: 100%;
 }
 
 .header{
-  width:1000px;
+  max-width:1000px;
   margin: auto;
   text-align: center;
 }
@@ -16,7 +16,7 @@ body{width: 100%;
   background-color: aqua;
 }
 .nav, .footer{
-  width: 1000px;
+  max-width: 1000px;
   margin: auto;
   text-align: center;
 }

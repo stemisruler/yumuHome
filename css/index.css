@@ -2,6 +2,7 @@ main {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
+    box-sizing: border-box;
   }
   
   section {
@@ -28,20 +29,27 @@ main {
     flex-direction: row;
     align-items: flex-start; /* Align items to the top of the container */
     border: 3px solid #000;
+    
   }
 
-  .section-container>img{
-    width: 400px;
-    height: 300px;
+  .section-container>a>img{
+    max-width: 400px;
+    max-height: 300px;
     padding: 10px 40px;
   }
   
+  .section-container>img{
+    max-width: 400px;
+    max-height: 300px;
+    padding: 10px 40px;
+  }
   
   .section-content {
     display: flex;
     flex-direction: row;
     align-items: center;
     flex: 1;
+    
   }
 
   .section-content h2,
@@ -67,11 +75,10 @@ main {
   .section-container:nth-of-type(2) p, 
   .section-container:nth-of-type(2) h2{
     margin-left: 20px;
-    padding-top: 100px;
   }
   .section-container:nth-of-type(2)>img{
-    width: 400px;
-    height: 600px;
+    max-width: 200px;
+    max-height: 300px;
   }
   
   

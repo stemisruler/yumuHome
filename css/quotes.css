@@ -31,8 +31,8 @@
   
   img {
     cursor: pointer;
-    max-width: 100%;
-    height: 110vh; /* set the height of the image to the height of the viewport */
+    max-width: 50%;
+    max-height: 110vh; /* set the height of the image to the height of the viewport */
   }
   
   body {
@@ -42,7 +42,7 @@
   }
   
   .container {
-    height: 50%;
+    max-height: 50%;
   }
 
   button>a{

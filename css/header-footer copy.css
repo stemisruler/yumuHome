@@ -1,0 +1,84 @@
+/* Reset all margins and paddings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Remove underline from links and set text color */
+a {
+  text-decoration: none;
+  color: black;
+}
+
+/* Set body width to 100% and center it */
+body {
+  width: 100%; 
+  margin: auto;
+  font-family: 'Darumadrop One', 'Kosugi Maru', cursive;
+}
+
+/* Center the header element */
+.header {
+  max-width: 1000px; /* Use max-width instead of width */
+  margin: 0 auto; /* Remove top and bottom margin */
+  text-align: center;
+}
+
+/* Add padding instead of margin to the navigation element */
+.nav_wrap {
+  padding-bottom: 1rem;
+  background-color: aqua;
+}
+
+/* Center the navigation and footer elements */
+.nav, .footer {
+  max-width: 1000px; /* Use max-width instead of width */
+  margin: 0 auto; /* Remove top and bottom margin */
+  text-align: center;
+}
+
+/* Set common styles for all navigation and footer links */
+.nav>a, .footer>a {
+  display: inline-block;
+  width: 200px;
+  height: 50px;
+  line-height: 50px;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: rgba(139, 20, 243, 0.906);
+  color: #FFFFFF; /* White */
+  text-decoration: none;
+  font-size: 20px;
+  transition: 0.3s;
+}
+
+/* Set specific background colors for different link classes */
+a.youtube {
+  background-color: #FF0000; /* Red */
+}
+a.twitter {
+  background-color: #1DA1F2; /* Blue */
+}
+a.goods {
+  background-color: #FC4D50; /* Booth */
+}
+a.questionbox {
+  background-color: #E6B45C; /* box color */
+}
+
+/* Add margin to link icons */
+a i {
+  margin-right: 10px;
+}
+
+/* Change background color on link hover */
+.nav>a:hover, .footer>a:hover {
+  background-color: rgb(121, 232, 121);
+}
+
+/* Add padding instead of margin to the footer wrapper */
+.footer_wrap {
+  padding-top: 1rem;
+  background-color: greenyellow;
+}

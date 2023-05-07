@@ -88,7 +88,7 @@ img {
     font-size: 2rem;
 }
 .row{
-    height: 120px;
+    max-height: 120px;
     overflow: hidden;
 }
 .row:after {
@@ -98,7 +98,7 @@ img {
 }
 
 .mySlides>a>img{
-    height: 500px;
+    max-height: 500px;
 }
 /* Six columns side by side */
 .column {
