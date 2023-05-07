@@ -9,117 +9,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <title>Yumu's introduce</title>
     <link rel="icon" href="images/page-icon.png" type="image/png">
-    <link rel="stylesheet" href="header-footer.css">
+    <link rel="stylesheet" href="css/header-footer.css">
+    <link rel="stylesheet" href="css/introduce.css">
 </head>
 <style>
-    body {
-        margin: 0;
-        background-color: black;
-        text-align: center;
-    }
-
-    * {
-        box-sizing: border-box;
-        color:white;
-
-    }
-
-    img {
-        vertical-align: middle;
-    }
-
-    .contents-section{
-        margin: 10px auto;
-    }
-
-    /* Position the image container (needed to position the left and right arrows) */
-    .container {
-        position: relative;
-    }
-
-    /* Hide the images by default */
-    .mySlides {
-        display: none;
-    }
-
-    /* Add a pointer when hovering over the thumbnail images */
-    .cursor {
-        cursor: pointer;
-    }
-
-    /* Next & previous buttons */
-    .prev,
-    .next {
-        cursor: pointer;
-        position: absolute;
-        top: 40%;
-        width: auto;
-        padding: 16px;
-        margin-top: -50px;
-        color: white;
-        font-weight: bold;
-        font-size: 60px;
-        border-radius: 0 3px 3px 0;
-        user-select: none;
-        -webkit-user-select: none;
-    }
-
-    /* Position the "next button" to the right */
-    .next {
-        right: 0;
-        border-radius: 3px 0 0 3px;
-    }
-
-    /* On hover, add a black background color with a little bit see-through */
-    .prev:hover,
-    .next:hover {
-        background-color: rgba(0, 0, 0, 0.8);
-    }
-
-    /* Number text (1/3 etc) */
-    .numbertext {
-        color: #f2f2f2;
-        font-size: 32px;
-        padding: 8px 12px;
-        position: absolute;
-        top: 0;
-    }
-
-    /* Container for image text */
-    .caption-container {
-        text-align: center;
-        background-color: #222;
-        padding: 2px 16px;
-        color: white;
-    }
-    .row{
-        height: 120px;
-        overflow: hidden;
-    }
-    .row:after {
-        content: "";
-        display: table;
-        clear: both;
-    }
-
-    .mySlides>a>img{
-        height: 400px;
-    }
-    /* Six columns side by side */
-    .column {
-        float: left;
-        width: 16.66%;
-    }
-
-    /* Add a transparency effect for thumnbail images */
-    .demo {
-        opacity: 0.6;
-    }
-
-    .active,
-    .demo:hover {
-        opacity: 1;
-    }
 </style>
 
 <body>
@@ -144,7 +37,7 @@
             Especially these days, she uploads a lot of different things with shorts.<br>
             <br>It's fun!</p>
     
-        <h2 style="text-align:center">Yumu Contents!</h2>
+        <h2>Yumu Contents!</h2>
         <div class="container">
             <div class="mySlides">
                 <div class="numbertext">1 / 6</div>
@@ -178,27 +71,27 @@
             <div class="row">
                 <div class="column">
                     <img class="demo cursor" src="images/contents/c_song.jpg" style="width:100%" onclick="currentSlide(1)"
-                        alt="1. Song, above is Yumu's original song! Click to connect. She often posts songs.">
+                        alt="1. Song : Yumu's original song is above! Click to connect. She often posts songs.">
                 </div>
                 <div class="column">
                     <img class="demo cursor" src="images/contents/c_rap.jpg" style="width:100%" onclick="currentSlide(2)"
-                        alt="2. Rap, rap is often posted on YouTube. She's good at rap.">
+                        alt="2. Rap : Rap is often posted on YouTube. She's good at rap.">
                 </div>
                 <div class="column">
                     <img class="demo cursor" src="images/contents/c_live_game.jpg" style="width:100%" onclick="currentSlide(3)"
-                        alt="3. Yumu plays various games on YouTube live. There are games played alone and participatory games. There is mahjong as a participatory game.">
+                        alt="​​3. Live_game [alone, with viewer] : Yumu plays games on YouTube live. There is mahjong as a participatory game.">
                 </div>
                 <div class="column">
                     <img class="demo cursor" src="images/contents/c_live_art.jpg" style="width:100%" onclick="currentSlide(4)"
-                        alt="4. Turn on YouTube live and do a drawing broadcast. These days she seems to be drawing a blue archive character.">
+                        alt="4. Live_drawing : These days she seems to be drawing a blue archive character.">
                 </div>
                 <div class="column">
                     <img class="demo cursor" src="images/contents/c_live_chat.png" style="width:100%" onclick="currentSlide(5)"
-                        alt="5. Talk to viewers on Vrchat. We can hear yumu's story and cute voice a lot.">
+                        alt="5. Live_VR chat : She talks with us by using Vrchat. We can hear yumu's story and cute voice a lot.">
                 </div>
                 <div class="column">
                     <img class="demo cursor" src="images/contents/c_asmr.jpg" style="width:100%" onclick="currentSlide(6)"
-                        alt="6. An ASMR video is uploaded on YouTube. The title is often labeled 'for men'.">
+                        alt="6. ASMR : ASMR video is uploaded and labled 'for men' on YouTube.">
                 </div>
             </div>
         </div>
@@ -223,36 +116,39 @@
           </a>
         </footer>
       </div>
-        <script>
-        let slideIndex = 1;
-        showSlides(slideIndex);
-
+      <script>
+        let slideIndex = 1; // Initialize slideIndex to 1
+        showSlides(slideIndex); // Call the showSlides function with slideIndex as the argument
+    
+        // Function to move the slide position by n slides
         function plusSlides(n) {
-            showSlides(slideIndex += n);
+            showSlides(slideIndex += n); // Call the showSlides function with the updated slideIndex value
         }
-
+    
+        // Function to move to a specific slide position
         function currentSlide(n) {
-            showSlides(slideIndex = n);
+            showSlides(slideIndex = n); // Set slideIndex to n and call the showSlides function with the new value
         }
-
+    
+        // Function to display the current slide and update the active dot and caption
         function showSlides(n) {
             let i;
-            let slides = document.getElementsByClassName("mySlides");
-            let dots = document.getElementsByClassName("demo");
-            let captionText = document.getElementById("caption");
-            if (n > slides.length) { slideIndex = 1 }
-            if (n < 1) { slideIndex = slides.length }
+            let slides = document.getElementsByClassName("mySlides"); // Get all elements with class "mySlides"
+            let dots = document.getElementsByClassName("demo"); // Get all elements with class "demo"
+            let captionText = document.getElementById("caption"); // Get the element with id "caption"
+            if (n > slides.length) { slideIndex = 1 } // If n is greater than the number of slides, set slideIndex to 1
+            if (n < 1) { slideIndex = slides.length } // If n is less than 1, set slideIndex to the number of slides
             for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
+                slides[i].style.display = "none"; // Hide all slides
             }
             for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" active", "");
+                dots[i].className = dots[i].className.replace(" active", ""); // Remove the "active" class from all dots
             }
-            slides[slideIndex - 1].style.display = "block";
-            dots[slideIndex - 1].className += " active";
-            captionText.innerHTML = dots[slideIndex - 1].alt;
+            slides[slideIndex - 1].style.display = "block"; // Display the current slide
+            dots[slideIndex - 1].className += " active"; // Add the "active" class to the current dot
+            captionText.innerHTML = dots[slideIndex - 1].alt; // Set the caption text to the alt text of the current dot
         }
     </script>
-
+    
 </body>
 </html>

@@ -1,0 +1,117 @@
+body {
+    margin: 0;
+    background-color: black;
+    text-align: center;
+}
+
+* {
+    box-sizing: border-box;
+    color:white;
+
+}
+
+img {
+    vertical-align: middle;
+}
+
+.contents-section{
+    margin: 10px auto;
+}
+
+.contents-section h2{
+    text-align:center;
+    font-size: 3rem;
+    color: blueviolet;
+}
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+    position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+    display: none;
+}
+
+/* Add a grabbing cursor when hovering over the thumbnail images */
+.cursor {
+    cursor: grabbing;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+    cursor: grab;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 1rem;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 60px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 2rem;
+    padding: 0.5rem;
+    position: absolute;
+    top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+    text-align: center;
+    background-color: #222;
+    padding: 2px 16px;
+    color: white;
+}
+
+.caption-container>#caption{
+    font-size: 2rem;
+}
+.row{
+    height: 120px;
+    overflow: hidden;
+}
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.mySlides>a>img{
+    height: 500px;
+}
+/* Six columns side by side */
+.column {
+    float: left;
+    width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+    opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+    opacity: 1;
+}
