@@ -92,3 +92,15 @@ document.addEventListener('keydown', function (event) {
     changeImage();
   }
 });
+
+function preloadImages() {
+  const images = document.querySelectorAll('img');
+  images.forEach((img) => {
+    const src = img.getAttribute('src');
+    const imgObj = new Image();
+    imgObj.src = src;
+  });
+}
+
+// Call the function when the page loads
+window.addEventListener('load', preloadImages);
